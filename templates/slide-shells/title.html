@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: var(--slide-padding, 80px);
+      box-sizing: border-box;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+    .slide h1 {
+      font-size: var(--title-size, 72px);
+      font-weight: var(--title-weight, 700);
+      margin-bottom: 24px;
+      color: var(--accent-primary);
+    }
+    .slide .subtitle {
+      font-size: var(--subtitle-size, 36px);
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+  <div class="slide slide-title">
+    <h1>{{title}}</h1>
+    <p class="subtitle">{{subtitle}}</p>
+  </div>
+</body>
+</html>

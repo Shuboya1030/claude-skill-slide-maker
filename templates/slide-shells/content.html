@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      display: flex;
+      flex-direction: column;
+      padding: var(--slide-padding, 80px);
+      box-sizing: border-box;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+    .slide h2 {
+      font-size: var(--heading-size, 56px);
+      font-weight: var(--heading-weight, 600);
+      margin-bottom: 48px;
+      color: var(--accent-primary);
+    }
+    .slide ul {
+      font-size: var(--body-size, 32px);
+      line-height: 1.6;
+      list-style: none;
+      padding: 0;
+    }
+    .slide li {
+      margin-bottom: 24px;
+      padding-left: 48px;
+      position: relative;
+    }
+    .slide li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 16px;
+      height: 16px;
+      background: var(--accent-primary);
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide slide-content">
+    <h2>{{title}}</h2>
+    <ul>
+      {{#each points}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</body>
+</html>

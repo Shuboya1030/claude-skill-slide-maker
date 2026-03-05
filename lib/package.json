@@ -1,0 +1,19 @@
+{
+  "name": "slide-maker-lib",
+  "version": "1.0.0",
+  "description": "Runtime library for Slide Maker Skills - Claude Code slide deck skill",
+  "private": true,
+  "scripts": {
+    "preview": "node preview-server.js",
+    "export": "node pptx-export.js"
+  },
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  },
+  "optionalDependencies": {
+    "playwright": "^1.57.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

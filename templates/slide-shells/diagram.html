@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="theme.css">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <style>
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      display: flex;
+      flex-direction: column;
+      padding: var(--slide-padding, 80px);
+      box-sizing: border-box;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+    .slide h2 {
+      font-size: var(--heading-size, 56px);
+      font-weight: var(--heading-weight, 600);
+      margin-bottom: 48px;
+      color: var(--accent-primary);
+    }
+    .diagram-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .mermaid {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide slide-diagram">
+    <h2>{{title}}</h2>
+    <div class="diagram-container">
+      <div class="mermaid">
+{{diagram}}
+      </div>
+    </div>
+  </div>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        primaryColor: getComputedStyle(document.documentElement).getPropertyValue('--accent-primary').trim() || '#3B82F6',
+        primaryTextColor: getComputedStyle(document.documentElement).getPropertyValue('--text-primary').trim() || '#1F2937',
+        primaryBorderColor: getComputedStyle(document.documentElement).getPropertyValue('--accent-secondary').trim() || '#2563EB',
+        lineColor: getComputedStyle(document.documentElement).getPropertyValue('--text-secondary').trim() || '#6B7280',
+        secondaryColor: getComputedStyle(document.documentElement).getPropertyValue('--bg-secondary').trim() || '#F3F4F6',
+        tertiaryColor: getComputedStyle(document.documentElement).getPropertyValue('--bg-tertiary').trim() || '#E5E7EB'
+      }
+    });
+  </script>
+</body>
+</html>

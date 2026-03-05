@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: var(--slide-padding, 80px);
+      box-sizing: border-box;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+    .slide h2 {
+      font-size: var(--heading-size, 64px);
+      font-weight: var(--heading-weight, 600);
+      margin-bottom: 24px;
+      color: var(--accent-primary);
+    }
+    .slide .quote {
+      font-size: 48px;
+      font-style: italic;
+      max-width: 1400px;
+      line-height: 1.5;
+      margin-bottom: 48px;
+    }
+    .slide .attribution {
+      font-size: 28px;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+  <div class="slide slide-quote">
+    <p class="quote">"{{quote}}"</p>
+    <p class="attribution">— {{attribution}}</p>
+  </div>
+</body>
+</html>
