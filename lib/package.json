@@ -1,7 +1,7 @@
 {
-  "name": "slide-maker-lib",
+  "name": "slidia-lib",
   "version": "1.0.0",
-  "description": "Runtime library for Slide Maker Skills - Claude Code slide deck skill",
+  "description": "Runtime library for Slidia - Claude Code slide deck skill",
   "private": true,
   "scripts": {
     "preview": "node preview-server.js",
@@ -11,7 +11,7 @@
     "pptxgenjs": "^3.12.0"
   },
   "optionalDependencies": {
-    "playwright": "^1.57.0"
+    "playwright": "^1.58.2"
   },
   "engines": {
     "node": ">=16.0.0"
